@@ -36,7 +36,7 @@ function createMarkup(data) {
 searchBox.addEventListener('input', debounce(() => {
     const name = searchBox.value.trim();
     if (name === '') {
-        return countryInfo.innerHTML = ''
+        return;
     }
     fetchCountries(name).then(showCountry).catch(showError);
 }, DEBOUNCE_DELAY));
